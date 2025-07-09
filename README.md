@@ -106,12 +106,12 @@ Most exercises can be compiled standalone:
 ```bash
 # Basic function compilation
 cd piscine_reloaded/ex12
-gcc -Wall -Wextra -Werror -o test ft_iterative_factorial.c main.c
+cc -Wall -Wextra -Werror -o test ft_iterative_factorial.c main.c
 ./test
 
 # For exercises requiring ft_putchar
 cd piscine_reloaded/ex06
-gcc -Wall -Wextra -Werror -o test ft_print_alphabet.c ft_putchar.c
+cc -Wall -Wextra -Werror -o test ft_print_alphabet.c ft_putchar.c
 ./test
 ```
 
@@ -222,7 +222,7 @@ int main() {
 }
 EOF
 
-gcc -o test ft_iterative_factorial.c test_factorial.c
+cc -o test ft_iterative_factorial.c test_factorial.c
 ./test
 rm test test_factorial.c
 ```
@@ -327,7 +327,7 @@ This project follows 42 School's strict coding standards:
 
 ```bash
 # Compile with debug symbols
-gcc -g -Wall -Wextra -Werror your_file.c
+cc -g -Wall -Wextra -Werror your_file.c
 
 # Use GDB for debugging
 gdb ./your_program
@@ -346,7 +346,7 @@ cppcheck --enable=all your_file.c
 
 ```bash
 # Compile with optimization
-gcc -O2 -Wall -Wextra -Werror your_file.c
+cc -O2 -Wall -Wextra -Werror your_file.c
 
 # Profile your code
 time ./your_program
@@ -358,7 +358,7 @@ time ./your_program
 
 - [C Programming Language (K&R)](https://en.wikipedia.org/wiki/The_C_Programming_Language)
 - [42 School Documentation](https://42.fr)
-- [GCC Manual](https://gcc.gnu.org/onlinedocs/)
+- [GCC Manual](https://cc.gnu.org/onlinedocs/)
 - [Makefile Tutorial](https://www.gnu.org/software/make/manual/)
 
 ### 🔗 Useful Links
@@ -399,7 +399,7 @@ git push origin main
 scp -r 42_warmup/ user@server:/path/to/course/materials/
 
 # Or use with containers
-docker run -v $(pwd):/workspace -it gcc:latest bash
+docker run -v $(pwd):/workspace -it cc:latest bash
 ```
 
 ## 🤝 Contributing
