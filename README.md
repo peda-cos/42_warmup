@@ -52,7 +52,7 @@ Perfect for indie developers looking to solidify their programming foundations o
 
 ### System Requirements
 - **OS**: Linux, macOS, or WSL2 on Windows
-- **Compiler**: GCC with C99 standard support
+- **Compiler**: Clang with C99 standard support
 - **Shell**: Bash (for shell scripts)
 - **Memory**: Minimum 512MB RAM
 - **Storage**: ~50MB free space
