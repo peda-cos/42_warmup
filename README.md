@@ -1,439 +1,214 @@
-# 🏊‍♂️ 42 Warmup Project
+# 42 Warmup
 
-[![42 School](https://img.shields.io/badge/42-School-000000?style=flat&logo=42&logoColor=white)](https://42sp.org.br)
-[![C](https://img.shields.io/badge/C-A8B9CC?style=flat&logo=c&logoColor=white)](https://en.wikipedia.org/wiki/C_(programming_language))
-[![License](https://img.shields.io/badge/License-Public%20Domain-blue.svg)](LICENSE)
+A comprehensive collection of warmup exercises for 42 School, featuring solutions to **Piscine Reloaded** and **P2P-101** modules. This repository serves as a foundational review of C programming concepts and peer-to-peer evaluation practices.
 
-> A comprehensive collection of 42 School warmup exercises designed to refresh and strengthen fundamental programming concepts.
+## 📋 Description
 
-## 📋 Table of Contents
+This repository contains completed exercises from the 42 School warmup curriculum, designed to refresh and strengthen fundamental programming skills before diving into the main curriculum. It includes both technical C programming challenges and reflective exercises on communication and peer evaluation.
 
-- [🎯 Overview](#-overview)
-- [📁 Project Structure](#-project-structure)
-- [⚙️ Prerequisites](#️-prerequisites)
-- [🚀 Installation](#-installation)
-- [💻 Usage](#-usage)
-- [🧪 Testing](#-testing)
-- [📚 Exercises](#-exercises)
-- [🤝 Peer Evaluation Guide](#-peer-evaluation-guide)
-- [🛠️ Development](#️-development)
-- [📖 Resources](#-resources)
-- [⚖️ License](#️-license)
+## 🛠️ Technology Stack
 
-## 🎯 Overview
-
-This project serves as a comprehensive warmup for 42 School students, covering:
-
-- **C Programming Fundamentals**: Basic functions, algorithms, and data structures
-- **System Administration**: Shell scripting and file operations
-- **Peer Evaluation Skills**: Practical scenarios for conducting fair and constructive evaluations
-
-Perfect for indie developers looking to solidify their programming foundations or prepare for technical interviews! 🎓
+- **Language**: C (C89/C90 standard)
+- **Build System**: Make
+- **Compiler**: GCC with flags `-Wall -Wextra -Werror`
+- **Shell Scripting**: Bash
+- **Tools**:
+  - Standard UNIX utilities (`find`, `grep`, `awk`, `ifconfig`)
+  - Archive tools (`tar`)
+  - File I/O operations
 
 ## 📁 Project Structure
 
 ```
 42_warmup/
-├── 📄 README.md                 # You are here!
-├── 📄 LICENSE                   # Public domain license
-├── 📂 piscine_reloaded/        # C programming exercises (ex00-ex27)
-│   ├── 📂 ex00-ex05/           # Shell & basic setup
-│   ├── 📂 ex06-ex21/           # Core C functions
-│   ├── 📂 ex22-ex23/           # Headers & structures
-│   ├── 📂 ex24/                # Library project with Makefile
-│   ├── 📂 ex25-ex26/           # Function pointers
-│   └── 📂 ex27/                # File operations
-└── 📂 p2p-101/                # Peer evaluation training
-    ├── 📂 ex01/                # Communication guidelines
-    └── 📂 ex02/                # Evaluation scenarios
+├── piscine_reloaded/     # C programming exercises (ex00-ex27)
+│   ├── ex00/             # Basic shell commands and tar archives
+│   ├── ex01-ex05/        # Shell scripting fundamentals
+│   ├── ex06-ex08/        # Basic output functions
+│   ├── ex09-ex11/        # Pointer manipulation
+│   ├── ex12-ex14/        # Algorithms (factorial, sqrt)
+│   ├── ex15-ex19/        # String manipulation and arguments
+│   ├── ex20-ex21/        # Dynamic memory allocation
+│   ├── ex22-ex23/        # Header files and structures
+│   ├── ex24/             # Library creation with Makefile
+│   ├── ex25-ex26/        # Function pointers
+│   └── ex27/             # File I/O operations
+└── p2p-101/              # Peer-to-peer evaluation scenarios
+    ├── ex01/             # Non-violent communication
+    └── ex02/             # Peer evaluation scenarios (15 scenarios)
 ```
 
-## ⚙️ Prerequisites
+## 🎯 Key Features
 
-### System Requirements
-- **OS**: Linux, macOS, or WSL2 on Windows
-- **Compiler**: Clang with C99 standard support
-- **Shell**: Bash (for shell scripts)
-- **Memory**: Minimum 512MB RAM
-- **Storage**: ~50MB free space
+### Piscine Reloaded (27 Exercises)
 
-### Development Tools
+1. **Shell Basics** (ex00-ex05):
+   - File creation and manipulation
+   - Shell script writing
+   - Pattern matching with special characters
+
+2. **Core C Functions** (ex06-ex11):
+   - Character and number printing
+   - Pointer operations
+   - Basic mathematical operations
+
+3. **Algorithms** (ex12-ex14):
+   - Iterative and recursive factorial
+   - Square root calculation
+
+4. **String Operations** (ex15-ex21):
+   - String output and comparison
+   - Dynamic memory allocation
+   - String duplication and range creation
+
+5. **Advanced Concepts** (ex22-ex27):
+   - Macro definitions
+   - Structure definitions
+   - Static library creation
+   - Function pointers
+   - File display utility
+
+### P2P-101 Module
+
+- **Communication Skills**: Reflections on non-violent communication in peer evaluation contexts
+- **Evaluation Scenarios**: 15 real-world peer evaluation scenarios covering:
+  - Time management during evaluations
+  - Handling disagreements professionally
+  - Providing constructive feedback
+  - Dealing with technical issues
+  - Maintaining integrity in peer reviews
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- GCC compiler (or compatible C compiler)
+- Make build system
+- UNIX-like operating system (Linux, macOS)
+- Basic understanding of C programming
+
+### Compilation
+
+Most exercises can be compiled individually. For exercises with Makefiles:
+
 ```bash
-# Essential tools
-sudo apt update && sudo apt install -y \
-    clang \
-    make \
-    libc6-dev \
-    gdb \
-    valgrind \
-    git
-```
-
-## 🚀 Installation
-
-### Quick Start
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/42_warmup.git
-cd 42_warmup
-
-# Make all scripts executable
-find . -name "*.sh" -type f -exec chmod +x {} \;
-
-# Test compilation (ex24 - library project)
+# For ex24 (library)
 cd piscine_reloaded/ex24
 make
-ls -la libft.a  # Should see the compiled library
-cd ../..
-```
 
-### Alternative: Direct Download
-
-```bash
-# Download as ZIP
-wget https://github.com/yourusername/42_warmup/archive/main.zip
-unzip main.zip
-cd 42_warmup-main
-```
-
-## 💻 Usage
-
-### 🔧 Compiling Individual Exercises
-
-Most exercises can be compiled standalone:
-
-```bash
-# Basic function compilation
-cd piscine_reloaded/ex12
-cc -Wall -Wextra -Werror -o test ft_iterative_factorial.c main.c
-./test
-
-# For exercises requiring ft_putchar
-cd piscine_reloaded/ex06
-cc -Wall -Wextra -Werror -o test ft_print_alphabet.c ft_putchar.c
-./test
-```
-
-### 📦 Building the Complete Library (ex24)
-
-```bash
-cd piscine_reloaded/ex24
-
-# Build the library
-make
-
-# Clean object files
-make clean
-
-# Clean everything
-make fclean
-
-# Rebuild from scratch
-make re
-```
-
-### 🗃️ File Display Utility (ex27)
-
-```bash
+# For ex27 (file display)
 cd piscine_reloaded/ex27
-
-# Build the utility
 make
-
-# Display a file
-./ft_display_file filename.txt
-
-# Test error cases
-./ft_display_file                    # Should show "File name missing."
-./ft_display_file file1.txt file2.txt  # Should show "Too many arguments."
 ```
 
-### 🐚 Running Shell Scripts
+For individual C files without Makefiles:
 
 ```bash
-# Find all .sh files (ex03)
-cd piscine_reloaded/ex03
-./find_sh.sh
-
-# Get MAC addresses (ex04)
-cd piscine_reloaded/ex04
-./MAC.sh
-
-# Clean temporary files (ex02)
-cd piscine_reloaded/ex02
-bash clean  # Removes files ending with ~ and #*#
+# Example compilation
+cc -Wall -Wextra -Werror ft_function.c -o ft_function
 ```
+
+### Running Shell Scripts
+
+```bash
+# Make the script executable
+chmod +x script.sh
+
+# Run the script
+./script.sh
+```
+
+## 💡 Exercise Highlights
+
+### Notable Implementations
+
+- **ex12/ex13**: Factorial functions demonstrating both iterative and recursive approaches
+- **ex14**: Integer square root calculation with overflow protection
+- **ex19**: Command-line argument sorting using bubble sort
+- **ex24**: Complete static library (`libft.a`) with modular architecture
+- **ex25/ex26**: Function pointer usage for higher-order functions
+- **ex27**: Robust file display utility with error handling
+
+### Code Quality Standards
+
+All C code follows the **42 Norm** (Norminette):
+- Maximum 25 lines per function
+- Maximum 80 characters per line
+- Specific naming conventions for variables and functions
+- Header files with include guards
+- Proper indentation and formatting
+- English variable names and comments
 
 ## 🧪 Testing
 
-### Automated Testing Script
+Each exercise should be tested with:
+- **Normal cases**: Standard input/output
+- **Edge cases**: NULL pointers, empty strings, boundary values
+- **Error handling**: Invalid inputs, memory allocation failures
+- **Memory leaks**: Use `valgrind` for dynamic memory exercises
 
-Create a simple test runner:
-
-```bash
-#!/bin/bash
-# save as test_runner.sh
-
-echo "🧪 Running 42 Warmup Tests..."
-
-# Test library compilation
-echo "📦 Testing library compilation..."
-cd piscine_reloaded/ex24
-if make > /dev/null 2>&1; then
-    echo "✅ Library compiled successfully"
-    make clean > /dev/null
-else
-    echo "❌ Library compilation failed"
-fi
-cd ../..
-
-# Test file display utility
-echo "🗃️ Testing file display utility..."
-cd piscine_reloaded/ex27
-if make > /dev/null 2>&1; then
-    echo "✅ ft_display_file compiled successfully"
-    # Test with this README
-    echo "📄 Testing file display..."
-    ./ft_display_file ../../README.md | head -5
-    make clean > /dev/null
-else
-    echo "❌ ft_display_file compilation failed"
-fi
-cd ../..
-
-echo "🎉 Testing complete!"
-```
-
-### Manual Testing Examples
+Example testing:
 
 ```bash
-# Test factorial functions
-cd piscine_reloaded/ex12
-cat > test_factorial.c << 'EOF'
-#include <stdio.h>
-int ft_iterative_factorial(int nb);
+# For factorial functions
+cc -Wall -Wextra -Werror ft_iterative_factorial.c main.c
+./a.out
 
-int main() {
-    printf("5! = %d\n", ft_iterative_factorial(5));  // Should be 120
-    printf("0! = %d\n", ft_iterative_factorial(0));  // Should be 1
-    printf("-1! = %d\n", ft_iterative_factorial(-1)); // Should be 0
-    return 0;
-}
-EOF
-
-cc -o test ft_iterative_factorial.c test_factorial.c
-./test
-rm test test_factorial.c
+# For memory leak detection
+valgrind --leak-check=full ./program
 ```
 
-## 📚 Exercises
+## 📚 Learning Outcomes
 
-### 🏗️ Foundation Exercises (ex00-ex05)
+By completing these exercises, you will:
 
-| Exercise | Description | Key Concepts |
-|----------|-------------|--------------|
-| **ex00** | TAR archive | File compression |
-| **ex01** | Print 'Z' | File output |
-| **ex02** | Clean script | File pattern matching |
-| **ex03** | Find .sh files | Shell scripting |
-| **ex04** | MAC addresses | Network commands |
-| **ex05** | Special characters | File naming |
-
-### 🧠 Core C Programming (ex06-ex21)
-
-| Exercise | Function | Description |
-|----------|----------|-------------|
-| **ex06** | `ft_print_alphabet` | Print a-z |
-| **ex07** | `ft_print_numbers` | Print 0-9 |
-| **ex08** | `ft_is_negative` | Check if number is negative |
-| **ex09** | `ft_ft` | Set pointer to 42 |
-| **ex10** | `ft_swap` | Swap two integers |
-| **ex11** | `ft_div_mod` | Division and modulo |
-| **ex12** | `ft_iterative_factorial` | Iterative factorial |
-| **ex13** | `ft_recursive_factorial` | Recursive factorial |
-| **ex14** | `ft_sqrt` | Integer square root |
-| **ex15** | `ft_putstr` | Print string |
-| **ex16** | `ft_strlen` | String length |
-| **ex17** | `ft_strcmp` | String comparison |
-| **ex18** | `ft_print_params` | Print program arguments |
-| **ex19** | `ft_sort_params` | Sort and print arguments |
-| **ex20** | `ft_strdup` | Duplicate string (malloc) |
-| **ex21** | `ft_range` | Create integer array |
-
-### 🗂️ Advanced Concepts (ex22-ex27)
-
-| Exercise | Topic | Description |
-|----------|-------|-------------|
-| **ex22** | Macros | `ABS` macro definition |
-| **ex23** | Structures | Point structure |
-| **ex24** | Makefile | Complete library project |
-| **ex25** | Function pointers | `ft_foreach` |
-| **ex26** | Function pointers | `ft_count_if` |
-| **ex27** | File I/O | Display file contents |
-
-## 🤝 Peer Evaluation Guide
-
-The `p2p-101` section contains practical scenarios for conducting effective peer evaluations:
-
-### 📖 Communication Principles (ex01)
-
-Key concepts from Non-Violent Communication:
-- **Active listening** 👂
-- **Empathy and mutual understanding** 💝
-- **Respectful dialogue** 🤝
-- **Emotional awareness** 🧠
-
-### 🎭 Evaluation Scenarios (ex02)
-
-Practice scenarios covering:
-- **No-show situations** 🕐
-- **Time management** ⏰
-- **Technical difficulties** 🔧
-- **Academic integrity** 📚
-- **Constructive feedback** 💬
-
-## 🛠️ Development
-
-### 🎨 Code Style Guidelines
-
-This project follows 42 School's strict coding standards:
-
-```c
-/* Standard 42 header */
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   filename.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: username <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: YYYY/MM/DD HH:MM:SS by username          #+#    #+#             */
-/*   Updated: YYYY/MM/DD HH:MM:SS by username         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-// Function implementation follows...
-```
-
-**Key Rules:**
-- Maximum 25 lines per function
-- Maximum 80 characters per line
-- No more than 5 functions per file
-- Strict error handling
-- No global variables
-
-### 🔍 Debugging Tips
-
-```bash
-# Compile with debug symbols
-cc -g -Wall -Wextra -Werror your_file.c
-
-# Use GDB for debugging
-gdb ./your_program
-(gdb) break main
-(gdb) run
-(gdb) step
-
-# Memory leak detection
-valgrind --leak-check=full ./your_program
-
-# Static analysis
-cppcheck --enable=all your_file.c
-```
-
-### 🏃‍♂️ Performance Optimization
-
-```bash
-# Compile with optimization
-cc -O2 -Wall -Wextra -Werror your_file.c
-
-# Profile your code
-time ./your_program
-```
-
-## 📖 Resources
-
-### 📚 Learning Materials
-
-- [C Programming Language (K&R)](https://en.wikipedia.org/wiki/The_C_Programming_Language)
-- [42 School Documentation](https://42.fr)
-- [GCC Manual](https://cc.gnu.org/onlinedocs/)
-- [Makefile Tutorial](https://www.gnu.org/software/make/manual/)
-
-### 🔗 Useful Links
-
-- [C Reference](https://en.cppreference.com/w/c)
-- [POSIX Standards](https://pubs.opengroup.org/onlinepubs/9699919799/)
-- [Shell Scripting Guide](https://www.shellscript.sh/)
-- [Git Best Practices](https://git-scm.com/book)
-
-### 🛠️ Development Tools
-
-```bash
-# Recommended VS Code extensions
-code --install-extension ms-vscode.cpptools
-code --install-extension ms-vscode.makefile-tools
-code --install-extension formulahendry.code-runner
-```
-
-## 🚀 Deployment
-
-### For Personal Use
-
-```bash
-# Create your own fork
-git clone https://github.com/yourusername/42_warmup.git
-cd 42_warmup
-
-# Add your solutions
-git add .
-git commit -m "Add: my solutions to warmup exercises"
-git push origin main
-```
-
-### For Educational Institutions
-
-```bash
-# Deploy to a server
-scp -r 42_warmup/ user@server:/path/to/course/materials/
-
-# Or use with containers
-docker run -v $(pwd):/workspace -it cc:latest bash
-```
+- ✅ Master fundamental C programming concepts
+- ✅ Understand memory management and pointers
+- ✅ Write clean, normed code following strict standards
+- ✅ Create and use Makefiles for project builds
+- ✅ Implement algorithms recursively and iteratively
+- ✅ Work with function pointers and callbacks
+- ✅ Practice effective peer evaluation techniques
+- ✅ Apply non-violent communication principles
 
 ## 🤝 Contributing
 
-While this is primarily an educational project, contributions are welcome:
+This repository represents personal solutions to 42 School exercises. While direct contributions are not expected, you are welcome to:
 
-1. 🍴 Fork the repository
-2. 🌟 Create a feature branch (`git checkout -b feature/amazing-addition`)
-3. 💻 Commit your changes (`git commit -m 'Add: amazing feature'`)
-4. 📤 Push to the branch (`git push origin feature/amazing-addition`)
-5. 🎯 Open a Pull Request
+- Use this as a reference for learning
+- Report issues or suggest improvements
+- Share alternative approaches (via issues/discussions)
 
-## ⚖️ License
+**Note**: If you are a current 42 student, please complete the exercises independently before consulting external solutions.
 
-This project is dedicated to the **public domain**. Feel free to use, modify, and distribute as you see fit! 🎉
+## 📖 P2P-101 Scenarios
 
-See the [LICENSE](LICENSE) file for full details.
+The P2P-101 module includes reflective exercises on:
+- Handling absent evaluators
+- Managing time pressure during evaluations
+- Dealing with failed evaluations constructively
+- Resolving interpretation differences
+- Addressing suspected cheating
+- Providing meaningful feedback
+- Testing in different environments
+- Supporting less experienced peers
+
+These scenarios prepare students for the collaborative, peer-driven learning environment at 42 School.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+```
+Copyright (c) 2025 Pedro Monteiro
+```
+
+## 🎓 Author
+
+**Pedro Monteiro** (peda-cos)
+- 42 School Student
+- Completion Date: October 2024
 
 ---
 
-## 💝 Acknowledgments
-
-- **42 School** for the excellent curriculum design
-- **The C Programming Community** for continuous inspiration
-- **Fellow 42 students** for peer learning and support
-
----
-
-<div align="center">
-
-**Happy Coding!** 🚀✨
-
-Made with ❤️ for the 42 Community
-
-[⬆️ Back to Top](#-42-warmup-project)
-
-</div>
+**Note**: This repository is part of the 42 School curriculum. The exercises and structure follow the official 42 Network pedagogy and evaluation system.
