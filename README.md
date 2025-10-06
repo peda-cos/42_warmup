@@ -10,7 +10,7 @@ This repository contains completed exercises from the 42 School warmup curriculu
 
 - **Language**: C (C89/C90 standard)
 - **Build System**: Make
-- **Compiler**: GCC with flags `-Wall -Wextra -Werror`
+- **Compiler**: Clang with flags `-Wall -Wextra -Werror`
 - **Shell Scripting**: Bash
 - **Tools**:
   - Standard UNIX utilities (`find`, `grep`, `awk`, `ifconfig`)
